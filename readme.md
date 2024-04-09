@@ -6,4 +6,4 @@
 - Customer service AI chatbot 
 - Comes with an SDK you can integrate 
 
-- Would complete ReadME later ❤️
+- Proper ReadME & Documentation later ❤️
