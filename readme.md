@@ -2,7 +2,7 @@
 #### Final year project? - Maybe? 
 
 
-- Train with your own intent file 
+- Train with your own intents
 - Customer service AI chatbot 
 - Comes with an SDK you can integrate 
 
