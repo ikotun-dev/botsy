@@ -6,7 +6,6 @@ import tensorflow as tf
 import nltk
 from nltk.stem import WordNetLemmatizer
 
-# Download NLTK resources
 nltk.download('punkt')
 
 lemmatizer = WordNetLemmatizer()
@@ -15,11 +14,10 @@ lemmatizer = WordNetLemmatizer()
 with open('intents.json') as file:
     intents = json.load(file)
 
-# Initialize lists for words, classes, and documents
 words = []
 classes = []
 documents = []
-ignoreLetters = ['?', '!', '.', ',']
+ignoreLetters = ['?', '!', '.', ',', 'a', 'an', 'and', 'are', 'be', 'do', 'have', 'i', 'in', 'is', 'me', 'of', 'that', 'the', 'to', 'you']
 
 # Loop through intents to extract patterns and tags
 for intent in intents['intents']:
@@ -69,24 +67,20 @@ for document in documents:
     # Append bag of words and output row to training data
     training.append(bag + outputRow)
 
-# Shuffle and convert training data to numpy array
 random.shuffle(training)
 training = np.array(training)
 
-# Split training data into features (trainX) and labels (trainY)
 trainX = training[:, :len(words)]
 trainY = training[:, len(words):]
 
-# Define model architecture
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(128, input_shape=(len(trainX[0]),), activation='relu'),
     tf.keras.layers.Dropout(0.5),
     tf.keras.layers.Dense(64, activation='relu'),
     tf.keras.layers.Dropout(0.5),
-    tf.keras.layers.Dense(len(trainY[0]), activation='softmax')
-])
+    tf.keras.layers.Dense(len(trainY[0]), activation='softmax') ])
 
-# Compile model
+
 sgd = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 

@@ -18,23 +18,76 @@
             ]
         },
         {
-            "tag": "goodbye",
+            "tag": "about",
             "patterns": [
-                "goodbye",
-                "bye",
-                "see you later",
-                "take care",
-                "see ya",
-                "farewell"
+                "who are you",
+                "name",
+                "whats your name? "
+  
             ],
             "responses": [
-                "Goodbye!",
-                "Bye!",
-                "Take care!",
-                "See you later!",
-                "Farewell!"
+                "I'm wise customer service bot!",
+                "Im the customer service bot here to help you"
+            ]
+        },
+        {
+            "tag": "account_registration",
+            "patterns": [
+                "I'm having trouble creating a Wise account",
+                "How do I access my Wise account?",
+                "I can't log in to my Wise account"
+            ],
+            "responses": [
+                "I'm sorry to hear you're having trouble with your Wise account. Let me guide you through the account registration and setup process. What specific issues are you facing?",
+                "To access your Wise account, you'll need to use the email address and password you used to sign up. If you're having trouble logging in, you can reset your password on the Wise website. Let me know if you need any further assistance with your account."
+            ]
+        },
+        {
+            "tag": "transfer_problems",
+            "patterns": [
+                "I'm having trouble sending money with Wise",
+                "The exchange rate I'm seeing is not as advertised",
+                "The fees for my international transfer seem too high"
+            ],
+            "responses": [
+                "I apologize for the issues you're experiencing with your international money transfer. Can you provide more details on the problem, such as the destination country, the amount, and the error message you're seeing?"
+            ]
+        },
+        {
+            "tag": "debit_card_problems",
+            "patterns": [
+                "My Wise debit card isn't working",
+                "I need to replace my Wise debit card",
+                "I'm having trouble using my Wise debit card abroad"
+            ],
+            "responses": [
+                "I'm sorry to hear you're having issues with your Wise debit card. Can you tell me more about the problem you're experiencing, such as where you're trying to use the card or any error messages you're seeing?",
+                "If your Wise debit card is not working, we can help you get a replacement. Please provide the details of the card, and I'll initiate the replacement process for you. We want to ensure you can access your money seamlessly when traveling or making purchases."
+            ]
+        },
+        {
+            "tag": "multi_currency_account",
+            "patterns": [
+                "I'm having trouble managing my Wise multi-currency account",
+                "The currency conversion in my Wise account is not working correctly",
+                "How do I add or remove currencies in my Wise multi-currency account?"
+            ],
+            "responses": [
+                "I apologize for the difficulties you're facing with your Wise multi-currency account. Can you describe the specific issue you're experiencing, such as problems with currency conversion or managing the currencies in your account?",
+                "Wise's multi-currency accounts are designed to be user-friendly, but we're happy to assist you if you're having any trouble. Please provide more details about the problem, and I'll do my best to help you resolve it or guide you through the necessary steps."
+            ]
+        },
+        {
+            "tag": "customer_support",
+            "patterns": [
+                "I need help with a Wise-related issue",
+                "Can I speak to a customer service representative?",
+                "I'd like to provide feedback or make a complaint"
+            ],
+            "responses": [
+                "I'm here to assist you with any Wise-related issues or inquiries you may have. Please go ahead and describe the problem you're facing, and I'll do my best to help or direct you to the appropriate customer service channels.",
+                "As a customer service chatbot, I'm available to address your concerns and provide assistance. If you'd like to speak with a human representative, I can connect you with our customer support team. Alternatively, I can also help you provide feedback or lodge a complaint."
             ]
         }
-        
     ]
 }
