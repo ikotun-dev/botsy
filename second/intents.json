@@ -1,6 +1,42 @@
 {
     "intents": [
         {
+            "tag": "fees_and_rates",
+            "patterns": [
+                "What are the fees for international transfers?",
+                "How much does Wise charge for currency conversion?",
+                "Can you tell me the exchange rates offered by Wise?"
+            ],
+            "responses": [
+                "Wise charges competitive fees for international transfers. You can find detailed information about our fees on our website.",
+                "Our currency conversion rates are transparent and competitive. You can check the current rates on our website or in the Wise app."
+            ]
+        },
+        {
+            "tag": "identity_verification",
+            "patterns": [
+                "How do I verify my identity with Wise?",
+                "What documents are required for identity verification?",
+                "I'm having trouble completing the identity verification process"
+            ],
+            "responses": [
+                "Identity verification is an important step to ensure the security of your Wise account. You can typically verify your identity by providing a government-issued ID and additional information.",
+                "If you're experiencing difficulties with the identity verification process, please reach out to our support team for assistance. They'll be happy to guide you through the steps and address any issues you may encounter."
+            ]
+        },
+        {
+            "tag": "mobile_app_support",
+            "patterns": [
+                "Is there a mobile app for Wise?",
+                "How do I download the Wise mobile app?",
+                "I'm having trouble using the Wise app on my phone"
+            ],
+            "responses": [
+                "Yes, Wise offers a mobile app for both iOS and Android devices. You can download it from the App Store or Google Play Store.",
+                "If you're experiencing difficulties with the Wise mobile app, try restarting your device or reinstalling the app. If the issue persists, please contact our support team for assistance."
+            ]
+        },        
+        {
             "tag": "greetings",
             "patterns": [
                 "hello",
