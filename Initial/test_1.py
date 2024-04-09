@@ -5,7 +5,7 @@ from possible_greetings import greetings
 
 class ChatBot:
     def __init__(self):
-        self.greetings = greetings
+        self.greetings = [greeting.lower() for greeting in greetings]
         self.responses = {
             "microservices_advantages": [
                 "Microservice architecture offers scalability, allowing independent scaling of services.",
@@ -25,8 +25,8 @@ class ChatBot:
     def greet(self):
         print("Hello! I'm your ChatBot. Ask me anything.")
         user_input = input("You : ")
-        while user_input.lower() in self.greetings:
-            print(random.choice(greetings))
+        if user_input in self.greetings:
+            print(f"{random.choice(self.greetings)}")
         print("What do you wanna ask me : ")
 
     def chat(self):
@@ -46,5 +46,6 @@ class ChatBot:
 
 # Example Usage
 chatbot = ChatBot()
+print(chatbot.greetings)
 chatbot.greet()
 chatbot.chat()
